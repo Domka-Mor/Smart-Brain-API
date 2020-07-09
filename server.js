@@ -14,7 +14,7 @@ const image = require('./controllers/image');
 const db = knex({
   client: 'pg',
   connection: {
-    host : '127.0.0.1',
+    host : 'postgresql-symmetrical-76331',
     // znamena localhost
     user : 'postgres',
     password : 'dominika0901',
@@ -33,7 +33,7 @@ app.use(cors());
 
 
 app.get('/', (req, res) => {res.send('It is working')})
-
+// APP.GET V SERVER.JS JE TO, CO VYPISE, AK VSETKO FUNGUJE
 
 app.post('/signin', (req, res) => signin.handleSignin(bcrypt, db)(req, res))
 // aj takto sa da zapisat + znena v signin.js
